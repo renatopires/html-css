@@ -9,18 +9,48 @@
     body{ 
         font-family : Arial , Helvetica , sans-serif;
     }
+    h1{ 
+        padding-left: 60px;
+        font-size: 2.5em;
+    }
+    td, th{ 
+        border: 1px solid black;
+        padding: 10px; }
+        
+    tr> th { 
+            background-color: #383838;
+            color: white;
+            font-weight: bolder;
+        }
+    
+     caption{ 
+        font-size: 1.5em;
+        font-weight:bold ;
+        padding: 20px;
+        background-color: lightgray;
+    }
+    thead, tfoot { 
+        background-color: #383838;
+        color: white; }
+
     table{ 
         width: 500px;
         border-collapse: collapse;
+        position: relative;
+   
     }
-    td,th{ 
-        border: 1px solid black;
-        padding: 10px;
+    thead> tr > th { 
+        background-color: #383838;
+   
     }
-    thead,tfoot{ 
-        background-color: gray;
-        color: white;
+    tr > th { 
+        position: sticky;
+        top: -1px;
+        background-color: #383838 ;
     }
+    tbody > tr:nth-child(2n){   
+        background-color: lightgray;}
+    /* Ou vc tbm pode se usar (odd ;para impar) , ou (even ; para par), e tbm pode usar (2n-1 ; para indicar impar). */
     td.num{ 
         text-align: right;
     }
@@ -42,15 +72,16 @@
 -->
     <table>
        <thead>
+           <caption> População das Unidades Federal</caption>
            <tr>
-               <th>Estado</th>
-               <th>População</th>
+               <th scope="row">Estado</th>
+               <th scope="row" style="width: 50px;">População</th>
            </tr>
        </thead> 
        <tfoot> 
         <th  scope =" row " > Total de Habitantes </th >
         <td  class =" num " > <strong > 210.147.125 </strong > </td >
-    </tr ></tfoot>
+    </tfoot>
     <tbody> 
         <tr >
                 <td> São Paulo </td >
